@@ -1,10 +1,10 @@
 package com.automation.pages;
 
+import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BasePage{
 
@@ -24,6 +24,6 @@ public class LoginPage extends BasePage{
     }
 
     public void openWebsite() {
-        driver.get("https://www.saucedemo.com/");
+        driver.get(ConfigReader.getConfigValue("application.url"));
     }
 }

@@ -1,6 +1,7 @@
 package com.automation.test;
 
 import com.automation.pages.*;
+import com.automation.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -10,7 +11,7 @@ public class OrderConfirmationTest extends BaseTest {
     @Test
     public void verifyUserCanPlaceOrder() {
         loginPage.openWebsite();
-        loginPage.doLogin("standard_user", "secret_sauce");
+        loginPage.doLogin(ConfigReader.getConfigValue("login.username"), ConfigReader.getConfigValue("login.password"));
 
         Assert.assertTrue(homePage.isHomePageDisplayed());
         homePage.clickOnAddToCartOfFirstItem();
