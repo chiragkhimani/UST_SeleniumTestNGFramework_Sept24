@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
     @FindBy(id = "user-name")
     WebElement usernameInput;
@@ -25,5 +25,9 @@ public class LoginPage extends BasePage{
 
     public void openWebsite() {
         driver.get(ConfigReader.getConfigValue("application.url"));
+    }
+
+    public boolean isLoginPageDisplayed() {
+        return usernameInput.isDisplayed() && passwordInput.isDisplayed();
     }
 }

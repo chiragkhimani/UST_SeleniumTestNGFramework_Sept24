@@ -1,6 +1,5 @@
 package com.automation.test;
 
-import com.automation.pages.*;
 import com.automation.utils.ConfigReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
