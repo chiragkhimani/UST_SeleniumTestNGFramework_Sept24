@@ -29,7 +29,6 @@ public class LoginLogoutTest extends BaseTest {
                 data[i][j] = tableData.get(i).get(j);
             }
         }
-
         return data;
     }
 
