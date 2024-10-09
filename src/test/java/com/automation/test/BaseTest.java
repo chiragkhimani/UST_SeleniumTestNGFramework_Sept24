@@ -3,8 +3,12 @@ package com.automation.test;
 import com.automation.pages.*;
 import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import java.io.ByteArrayInputStream;
 
 public class BaseTest {
 
@@ -31,5 +35,7 @@ public class BaseTest {
     public void cleanUp() {
         DriverManager.getDriver().quit();
     }
+
+
 
 }

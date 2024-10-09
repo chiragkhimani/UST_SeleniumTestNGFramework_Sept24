@@ -2,6 +2,8 @@ package com.automation.pages;
 
 import com.automation.utils.ConfigReader;
 import com.automation.utils.DriverManager;
+import io.qameta.allure.Allure;
+import io.qameta.allure.model.Status;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,6 +27,7 @@ public class LoginPage extends BasePage {
 
     public void openWebsite() {
         driver.get(ConfigReader.getConfigValue("application.url"));
+        Allure.step("Website Opened!", Status.PASSED);
     }
 
     public boolean isLoginPageDisplayed() {
